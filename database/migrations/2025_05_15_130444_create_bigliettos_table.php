@@ -13,6 +13,10 @@ return new class extends Migration
     {
         Schema::create('bigliettos', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('evento_id');
+            $table->foreign('evento_id')->references('id')->on('eventos');
+            $table->unsignedBigInteger('utente_id');
+            $table->foreign('utente_id')->references('id')->on('utentes');
             $table->decimal('prezzo');
             $table->string('settore');
             $table->string('fila');

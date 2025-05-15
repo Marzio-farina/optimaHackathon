@@ -6,25 +6,21 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
-    /**
-     * Run the migrations.
-     */
     public function up(): void
     {
         Schema::create('eventos', function (Blueprint $table) {
             $table->id();
-            $table->decimal('nome');
-            $table->string('localita');
-            $table->string('data');
-            $table->integer('ora');
+            $table->string('nome', 50);
+            $table->string('localita', 50);
+            $table->date('data');
+            $table->time('ora');
+            $table->unsignedBigInteger('categoria_id');
+            $table->foreign('categoria_id')->references('id')->on('categoria_eventos')->onDelete('cascade');
             $table->integer('posto');
             $table->timestamps();
         });
     }
 
-    /**
-     * Reverse the migrations.
-     */
     public function down(): void
     {
         Schema::dropIfExists('eventos');

@@ -13,13 +13,13 @@ return new class extends Migration
     {
         Schema::create('categoria_eventos', function (Blueprint $table) {
             $table->id();
-            $table->string('artista');
-            $table->string('genere');
-            $table->string('squadra_casa');
-            $table->string('squadra_ospite');
-            $table->string('tipo_sport');
-            $table->string('relatore');
-            $table->string('argomento');
+            $table->string('artista',50);
+            $table->string('genere',30);
+            $table->string('squadra_casa',50);
+            $table->string('squadra_ospite',50);
+            $table->string('tipo_sport',30);
+            $table->string('relatore',50);
+            $table->string('argomento',100);
             $table->timestamps();
         });
     }

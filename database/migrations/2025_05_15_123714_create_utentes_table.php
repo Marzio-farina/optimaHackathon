@@ -13,11 +13,11 @@ return new class extends Migration
     {
         Schema::create('utentes', function (Blueprint $table) {
             $table->id();
-            $table->string('nome');
-            $table->string('cognome');
+            $table->string('nome',30);
+            $table->string('cognome',30);
             $table->date('data_nascita');
-            $table->string('email')->unique();
-            $table->string('cf')->unique();
+            $table->string('email',50)->unique();
+            $table->string('cf',16)->unique();
             $table->enum('genere', ['M', 'F']);
             $table->timestamps();
         });
