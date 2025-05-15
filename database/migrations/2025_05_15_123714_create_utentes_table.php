@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('email',50)->unique();
             $table->string('cf',16)->unique();
             $table->enum('genere', ['M', 'F']);
+            $table->string('password');
             $table->timestamps();
         });
     }
