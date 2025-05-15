@@ -8,18 +8,20 @@ return new class extends Migration
 {
     public function up(): void
     {
-        Schema::create('eventos', function (Blueprint $table) {
+        Schema::create('meetings', function (Blueprint $table) {
             $table->id();
-            $table->string('nome', 50);
-            $table->string('localita', 50);
-            $table->date('data');
-            $table->time('ora');
+            $table->string('relatore');
+            $table->string('argomento');
+            $table->foreign('id')->references('id')->on('eventos');
             $table->timestamps();
         });
     }
 
+    /**
+     * Reverse the migrations.
+     */
     public function down(): void
     {
-        Schema::dropIfExists('eventos');
+        Schema::dropIfExists('meetings');
     }
 };
