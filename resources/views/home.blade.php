@@ -12,13 +12,13 @@
 
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <img src="imgs/event1.png" class="d-block w-100" alt="Concerto 1">
+        <img src="./img/event1.png" class="d-block w-100" alt="Concerto 1">
       </div>
       <div class="carousel-item">
-        <img src="imgs/event2.png" class="d-block w-100" alt="Concerto 2">
+        <img src="./img/event2.png" class="d-block w-100" alt="Concerto 2">
       </div>
       <div class="carousel-item">
-        <img src="imgs/event3.jpg" class="d-block w-100" alt="Concerto 3">
+        <img src="./img/event3.jpg" class="d-block w-100" alt="Concerto 3">
       </div>
     </div>
 
@@ -59,20 +59,26 @@
             <ul class="nav nav-pills custom-tabs justify-content-center flex-wrap mb-4" id="categoryTabs" role="tablist">
               <li class="nav-item" role="presentation">
                 <button class="nav-link active" id="all-tab" data-bs-toggle="pill" data-bs-target="#all" type="button" role="tab">
-                  <img src="imgs/soccer-ball-variant.png" class="tab-icon-sm" alt="Sport">
+                  <img src="./img/tutti.jpg" class="tab-icon-sm" alt="All">
                   <div class="tab-label">Tutti</div>
                 </button>
               </li>
               <li class="nav-item" role="presentation">
                 <button class="nav-link" id="sport-tab" data-bs-toggle="pill" data-bs-target="#sport" type="button" role="tab">
-                  <img src="imgs/soccer-ball-variant.png" class="tab-icon-sm" alt="Sport">
+                  <img src="./img/soccer-ball-variant.png" class="tab-icon-sm" alt="Sport">
                   <div class="tab-label">Sport</div>
                 </button>
               </li>
               <li class="nav-item" role="presentation">
                 <button class="nav-link" id="musica-tab" data-bs-toggle="pill" data-bs-target="#musica" type="button" role="tab">
-                  <img src="imgs/microphone.png" class="tab-icon-sm" alt="Musica">
+                  <img src="./img/microphone.png" class="tab-icon-sm" alt="Musica">
                   <div class="tab-label">Musica</div>
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="meeting-tab" data-bs-toggle="pill" data-bs-target="#meeting" type="button" role="tab">
+                  <img src="./img/fair-trade.png" class="tab-icon-sm" alt="Meeting">
+                  <div class="tab-label">Meeting</div>
                 </button>
               </li>
             </ul>
@@ -87,13 +93,13 @@
                 @endforelse
               </div>
               <div class="tab-pane fade" id="sport" role="tabpanel">
-                <p>Contenuti musicali...</p>
+                <p>Contenuti sportivi...</p>
               </div>
               <div class="tab-pane fade" id="musica" role="tabpanel">
                 <p>Contenuti musicali...</p>
               </div>
               <div class="tab-pane fade" id="meeting" role="tabpanel">
-                <p>Contenuti teatrali...</p>
+                <p>Contenuti eventi meeting...</p>
               </div>
             </div>
           </div>
