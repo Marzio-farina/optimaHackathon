@@ -1,0 +1,60 @@
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+.form-control,
+.form-select {
+    color: #000 !important;
+    background-color: #fff;
+}
+
+.bg-cover {
+    background-image: url('https://images.unsplash.com/photo-1507874457470-272b3c8d8ee2?auto=format&fit=crop&w=1920&q=80');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Darken the image */
+    z-index: 1;
+}
+
+.form-wrapper {
+position: relative;
+z-index: 2;
+margin-top: 80px; /* o 100px per più distanza */
+}
+
+
+.form-card {
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 16px;
+    padding: 2.5rem;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
+}
+
+.navbar-custom {
+    background-color: rgba(13, 110, 253, 0.9);
+    z-index: 3;
+}
+
+.navbar-custom .navbar-brand,
+.navbar-custom .form-control,
+.navbar-custom .navbar-text {
+    color: white;
+}
+
+@media (max-width: 576px) {
+    .form-card {
+    padding: 1.5rem;
+    }
+}
