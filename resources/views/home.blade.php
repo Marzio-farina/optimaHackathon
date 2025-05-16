@@ -59,7 +59,7 @@
             <ul class="nav nav-pills custom-tabs justify-content-center flex-wrap mb-4" id="categoryTabs" role="tablist">
               <li class="nav-item" role="presentation">
                 <button class="nav-link active" id="all-tab" data-bs-toggle="pill" data-bs-target="#all" type="button" role="tab">
-                  <img src="./img/tutti.jpg" class="tab-icon-sm" alt="All">
+                  <img src="./img/tutti.png" class="tab-icon-sm" alt="All">
                   <div class="tab-label">Tutti</div>
                 </button>
               </li>

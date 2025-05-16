@@ -16,5 +16,6 @@ class Utente extends Model
         'email',
         'cf',
         'genere',
+        'password',
     ];
 }

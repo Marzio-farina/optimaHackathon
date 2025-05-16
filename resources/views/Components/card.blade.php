@@ -1,7 +1,6 @@
 <div class="containerCard m-4">	
   <div class="product-details">
     <a href="#"><h4>{{ Str::limit($evento->nome, 25, '...') }}</h4></a>
-    <p>Descrizione breve dell’evento...</p>
     {{-- @if($biglietti->isNotEmpty()) --}}
         @foreach ($biglietti as $biglietto)
             <span class="price d-block">Prezzo: {{ $biglietto->prezzo ?? 'N/A' }} €</span>
@@ -16,7 +15,7 @@
     </div>
 
     <!-- Pulsante acquisto disabilitato/commentato -->
-    <!-- 
+
     <div class="buttonBuy buttonBuyClick" data-price="49.99">
       <div class="buttonBuy-wrapper">
         <span class="iconBuy">
@@ -26,19 +25,18 @@
         </span>
         <div class="textBuy">Compra</div>
       </div>
-    </div>     
-    -->
+    </div>
   </div>  
 
   <div class="product-image">
     <img src="https://via.placeholder.com/300x300" alt="Immagine dell'articolo Titolo Articolo Esempio" class="custom-card-img w-100 img-fluid">
     <div class="info">
-      <h2>Descrizione</h2>
+      <h5>Descrizione</h5>
       <ul>
-        <li><strong>Altezza:</strong> 40 cm</li>
-        <li><strong>Colore:</strong> Rosso</li>
-        <li><strong>Decorazione:</strong> Classica</li>
-        <li><strong>Materiale:</strong> Legno</li>
+        <li><strong>Località:</strong>Napoli</li>
+        <li><strong>Data:</strong>15/05/2025</li>
+        <li><strong>Ora:</strong> 21:00</li>
+        <li><strong>Descrizione:</strong><p>231231</p></li>
       </ul>
     </div>
   </div>

@@ -1,4 +1,13 @@
 <x-layout>
+  @if ($errors->any())
+    <div class="alert alert-danger">
+      <ul class="mb-0">
+        @foreach ($errors->all() as $error)
+          <li>{{ $error }}</li>
+        @endforeach
+      </ul>
+    </div>
+  @endif
   <div class="bg-cover d-flex align-items-center justify-content-center">
     <div class="overlay"></div>
     <div class="container form-wrapper d-flex justify-content-center align-items-center h-100">
@@ -27,8 +36,8 @@
           </div>
 
           <div class="mb-3">
-            <label for="codiceFiscale" class="form-label">Codice Fiscale</label>
-            <input type="text" class="form-control" id="codiceFiscale" name="codiceFiscale" required maxlength="16" pattern="[A-Z0-9]{16}">
+            <label for="cf" class="form-label">Codice Fiscale</label>
+            <input type="text" class="form-control" id="cf" name="cf" required maxlength="16" pattern="[A-Z0-9]{16}">
           </div>
 
           <div class="mb-4">
