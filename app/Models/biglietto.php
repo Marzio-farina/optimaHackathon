@@ -15,4 +15,9 @@ class biglietto extends Model
         'fila',
         'numero',
     ];
+
+    public function evento()
+    {
+        return $this->belongsTo(Evento::class);
+    }
 }

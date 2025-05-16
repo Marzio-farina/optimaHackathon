@@ -20,7 +20,7 @@ class BigliettoSeeder extends Seeder
                 'numero' => 10,
             ],
             [
-                'evento_id' => 1,
+                'evento_id' => 3,
                 'utente_id' => 2,
                 'prezzo' => 30.00,
                 'settore' => 'B',

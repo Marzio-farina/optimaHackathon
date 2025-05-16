@@ -15,4 +15,9 @@ class evento extends Model
         'ora',
         'posto',
     ];
+
+    public function biglietti()
+    {
+        return $this->hasMany(Biglietto::class);
+    }
 }

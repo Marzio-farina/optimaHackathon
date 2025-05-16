@@ -58,7 +58,13 @@
           <div class="col-md-9">
             <ul class="nav nav-pills custom-tabs justify-content-center flex-wrap mb-4" id="categoryTabs" role="tablist">
               <li class="nav-item" role="presentation">
-                <button class="nav-link active" id="sport-tab" data-bs-toggle="pill" data-bs-target="#sport" type="button" role="tab">
+                <button class="nav-link active" id="all-tab" data-bs-toggle="pill" data-bs-target="#all" type="button" role="tab">
+                  <img src="imgs/soccer-ball-variant.png" class="tab-icon-sm" alt="Sport">
+                  <div class="tab-label">Tutti</div>
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="sport-tab" data-bs-toggle="pill" data-bs-target="#sport" type="button" role="tab">
                   <img src="imgs/soccer-ball-variant.png" class="tab-icon-sm" alt="Sport">
                   <div class="tab-label">Sport</div>
                 </button>
@@ -69,62 +75,25 @@
                   <div class="tab-label">Musica</div>
                 </button>
               </li>
-              <li class="nav-item" role="presentation">
-                <button class="nav-link" id="teatro-tab" data-bs-toggle="pill" data-bs-target="#teatro" type="button" role="tab">
-                  <img src="imgs/theater.png" class="tab-icon-sm" alt="Teatro">
-                  <div class="tab-label">Teatro</div>
-                </button>
-              </li>
-              <li class="nav-item" role="presentation">
-                <button class="nav-link" id="arte-tab" data-bs-toggle="pill" data-bs-target="#arte" type="button" role="tab">
-                  <img src="imgs/museum.png" class="tab-icon-sm" alt="Arte">
-                  <div class="tab-label">Arte</div>
-                </button>
-              </li>
-              <li class="nav-item" role="presentation">
-                <button class="nav-link" id="parchi-tab" data-bs-toggle="pill" data-bs-target="#parchi" type="button" role="tab">
-                  <img src="imgs/rollercoaster.png" class="tab-icon-sm" alt="Parchi">
-                  <div class="tab-label">Parchi</div>
-                </button>
-              </li>
-              <li class="nav-item" role="presentation">
-                <button class="nav-link" id="fiere-tab" data-bs-toggle="pill" data-bs-target="#fiere" type="button" role="tab">
-                  <img src="imgs/fair-trade.png" class="tab-icon-sm" alt="Fiere">
-                  <div class="tab-label">Fiere</div>
-                </button>
-              </li>
             </ul>
 
             <!-- Contenuto tab -->
             <div class="tab-content" id="categoryTabsContent">
-              <div class="tab-pane fade show active" id="sport" role="tabpanel">
-                <div class="card" style="width: 18rem;">
-                  <img src="https://picsum.photos/id/237/200/300" class="card-img-top" alt="...">
-                  <div class="card-body">
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
-                  </div>
-                  </div>
+              <div class="tab-pane fade show active d-flex" id="all" role="tabpanel">
+                @forelse ($events as $evento)
+                    <x-card :evento="$evento" :biglietti="$evento->biglietti"/>
+                @empty
+                    <h3 class="text-center mt-4">Non sono presenti eventi</h3>
+                @endforelse
               </div>
-              <div class="tab-pane fade" id="musica" role="tabpanel">
-                <h4>Musica</h4>
+              <div class="tab-pane fade" id="sport" role="tabpanel">
                 <p>Contenuti musicali...</p>
               </div>
-
-              <div class="tab-pane fade" id="teatro" role="tabpanel">
-                <h4>Teatro</h4>
+              <div class="tab-pane fade" id="musica" role="tabpanel">
+                <p>Contenuti musicali...</p>
+              </div>
+              <div class="tab-pane fade" id="meeting" role="tabpanel">
                 <p>Contenuti teatrali...</p>
-              </div>
-              <div class="tab-pane fade" id="arte" role="tabpanel">
-                <h4>Arte</h4>
-                <p>Contenuti artistici...</p>
-              </div>
-              <div class="tab-pane fade" id="parchi" role="tabpanel">
-                <h4>Parchi</h4>
-                <p>Contenuti di parchi...</p>
-              </div>
-              <div class="tab-pane fade" id="fiere" role="tabpanel">
-                <h4>Fiere</h4>
-                <p>Contenuti di fiere...</p>
               </div>
             </div>
           </div>
