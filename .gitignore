@@ -21,3 +21,7 @@ yarn-error.log
 /.nova
 /.vscode
 /.zed
+# Generated Graphify artifacts
+/graphify-out/
+/.graphify-venv/
+/.graphify/__pycache__/
